@@ -13,6 +13,7 @@ export class ZipcodeEntryComponent implements OnInit {
   constructor(private _location: LocationService) { }
 
   addLocation(zipcode: string) {
+    console.log('add location');
     this._location.addLocation(zipcode);
   }
   ngOnInit(): void {
