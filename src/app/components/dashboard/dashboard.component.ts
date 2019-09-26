@@ -13,18 +13,18 @@ export class DashboardComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Current Weather', cols: 1, rows: 1 },
+          { title: '5 Day Forecast', cols: 1, rows: 1 },
+          { title: 'Top Cities', cols: 1, rows: 1 },
+          { title: 'Rain Alerts', cols: 1, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Current Weather', cols: 2, rows: 1 },
+        { title: 'Top Cities', cols: 1, rows: 1 },
+        { title: '5 Day Forecast', cols: 1, rows: 2 },
+        { title: 'Rain Alerts', cols: 1, rows: 1 }
       ];
     })
   );

@@ -1,0 +1,12 @@
+.zipcode-form {
+  min-width: 150px;
+  max-width: 500px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .full-width {
+    // width: 100%;
+  }
+}

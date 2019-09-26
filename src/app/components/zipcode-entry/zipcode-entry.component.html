@@ -1,0 +1,8 @@
+
+
+<form class="zipcode-form" (ngSubmit)="addLocation(zipcode)">
+    <mat-form-field class="full-width">
+        <input name="zipcode" matInput placeholder="Zipcode" [(ngModel)]="zipcode">
+    </mat-form-field>
+    <button type="submit" mat-raised-button>Add Location</button>
+</form>

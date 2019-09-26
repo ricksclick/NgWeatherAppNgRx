@@ -10,8 +10,11 @@
       <a mat-list-item href="javascript:void(0)" routerLink="dashboard">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
+  <!-- Side Nav Content -->
   <mat-sidenav-content>
+    <!-- Top Menu  -->
     <mat-toolbar color="primary">
+      <!-- Side Nav Toggle Button -->
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -22,6 +25,7 @@
       </button>
       <span>Ng Weather App</span>
     </mat-toolbar>
+    <!-- Routes -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
