@@ -1,32 +1,32 @@
 <div class="cards-container">
     <mat-card class="weather-card" *ngFor="let zip of zipcodes" (click)="showForecast(zip)">
-        <ng-container *ngIf="getConditions(zip) else loading">
+        <ng-container *ngIf="getConditions(zip) as weatherData else loading">
             <mat-card-title>
                 <div class="card-title">
                     <span class="mat-title">
-                        {{getConditions(zip)?.name}} ({{zip}})
+                        {{weatherData?.name}} ({{zip}})
                     </span>
                     <span>
                         <button mat-icon-button class="close-button" (click)="removeZip(zip)" aria-label="Toggle menu">
                             <mat-icon>close</mat-icon>
                         </button>
-                        <img [src]="imgUrl(zip)">
+                        <img [src]="imgUrl(weatherData)">
                     </span>
                 </div>
             </mat-card-title>
             <mat-card-content>
                 <div>
-                    <h4>Current conditions: {{getConditions(zip)?.weather[0].main}}</h4>
+                    <h4>Current conditions: {{weatherData?.weather[0].main}}</h4>
                     <mat-divider [inset]="true"></mat-divider>
                     <h4>Temperatures today:</h4>
                     <p>
-                        Current {{getConditions(zip)?.main.temp | number:'.0-0'}}
-                        - Max {{getConditions(zip)?.main.temp_max | number:'.0-0'}}
-                        - Min {{getConditions(zip)?.main.temp_min | number:'.0-0'}}
+                        Current {{weatherData?.main.temp | number:'.0-0'}}
+                        - Max {{weatherData?.main.temp_max | number:'.0-0'}}
+                        - Min {{weatherData?.main.temp_min | number:'.0-0'}}
                     </p>
                     <p>
                         <button mat-raised-button [routerLink]="['/forecast', zip]">Show 5-day forecast for
-                            {{getConditions(zip)?.name}}</button>
+                            {{weatherData?.name}}</button>
                     </p>
                 </div>
             </mat-card-content>

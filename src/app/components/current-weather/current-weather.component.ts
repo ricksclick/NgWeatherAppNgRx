@@ -44,8 +44,8 @@ export class CurrentWeatherComponent implements OnInit {
     this._store.dispatch(new RemoveZipcode(zip));
   }
 
-  imgUrl(zip: string) {
-    return this._weatherService.getWeatherIcon(this.getConditions(zip).weather[0].id);
+  imgUrl(weatherData: any) {
+    return this._weatherService.getWeatherIcon(weatherData.weather[0].id);
   }
 
   get zipcodes() {
