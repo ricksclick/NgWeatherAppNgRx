@@ -1,3 +1,25 @@
-.weather-card {
-    margin: 1rem;
+.cards-container {
+  padding: 0 1rem;
+  .weather-card {
+    // margin: 1rem;
+    max-height: 300px;
+    width: 50%;
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > span {
+        display: inline-flex;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0;
+        &:last-of-type {
+          > img {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
 }
