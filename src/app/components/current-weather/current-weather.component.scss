@@ -14,11 +14,13 @@
         align-content: center;
         margin: 0;
         &:last-of-type {
-          > img {
-            height: 40px;
-            width: 40px;
-          }
         }
+      }
+    }
+    .card-content {
+      img {
+        height: 40px;
+        width: 40px;
       }
     }
   }

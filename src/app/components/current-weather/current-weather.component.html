@@ -10,13 +10,15 @@
                         <button mat-icon-button class="close-button" (click)="removeZip(zip)" aria-label="Toggle menu">
                             <mat-icon>close</mat-icon>
                         </button>
-                        <img [src]="imgUrl(weatherData)">
                     </span>
                 </div>
             </mat-card-title>
             <mat-card-content>
-                <div>
+                <div class="card-content">
                     <h4>Current conditions: {{weatherData?.weather[0].main}}</h4>
+                    <p>
+                        <img [src]="imgUrl(weatherData)">
+                    </p>
                     <mat-divider [inset]="true"></mat-divider>
                     <h4>Temperatures today:</h4>
                     <p>
